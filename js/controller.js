@@ -40,7 +40,7 @@ angular.module('RouteControllers', [])
         $scope.todos = [];
  
         TodoAPIService.getTodos(URL + "todo/", $scope.username, $scope.authToken).then(function(results) {
-            $scope.todos = results.data || [];
+            $scope.todos = results.data;
             console.log($scope.todos);
         }).catch(function(err) {
             console.log(err);
